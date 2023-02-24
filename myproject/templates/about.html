@@ -1,0 +1,38 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'about.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundle Packages</title>
+</head>
+<body>
+    <div class="left">
+        <div class="about">ABOUT</div>
+</div>
+
+<header>
+<div class="story">OUR STORY</div>
+<div class="one">We are a fast growing software company that keeps culture and creativity at the heart of everything we do. Our mission is to help customers unlock their creativity using our uniquely powerful design platform and our tirelessly helpful support resources.</div>
+<div class="two">We believe in a valuable and less invasive way where customers are earned and not bought. We’re obsessively passionate about it and our mission is to help people achieve it. We focus on search engine optimization. It is the  least understood and least transparent aspects of marketing and we see that as an opportunity. We’re excited to simplify everything for you through our software and community</div>
+<div class="what">WHAT WE DO</div>
+<div class="three">Precision touches every aspect of our company from our culture and sustainable product design. We see our business as a vehicle to make an impact</div>
+<div class="diff">WE'RE DIFFERERNT THAN THE REST</div>
+<div class="four">Unlike other agencies, we have experience to deliver customer satisfaction to our clients. We aim for growth and diversifying how we generate new businesses</div> 
+<p class="back">
+    {% if user.is_authenticated %}
+    <a href="login">Back</a>
+    {% else %}
+    <a href="/">Home Page</a>
+    {% endif %}
+     
+ </p>
+</header>
+
+
+</body>
+</html>

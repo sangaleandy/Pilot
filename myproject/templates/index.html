@@ -1,0 +1,50 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="icon" href="./road.jpg" type="image/jpg" sizes="16x16">
+    -->
+    <title>Bundle Packages</title>
+</head>
+<body>
+
+<!--nav-bar-->
+<div class="line">
+    <a href="/" class="item1">HOME</a>
+    <a href="login" class="item2">PACKAGES</a>
+    <a href="register" class="item2">REGISTER</a>
+    <a href="services" class="item2">CONTACT US</a>
+    <a href="about" class="item2">ABOUT</a>
+</div>
+<!--sign in or sign up-->
+
+<!--warning message-->
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+
+    <form method="POST" action="login">
+        {% csrf_token %}
+        <P>Username</P>
+        <input type="text" name="username" class="box"/>
+        <P>Password</P>
+        <input type="password" name="password" class="box"/><br>
+        <input type="checkbox" value="IsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me.</label>
+        <div class="sign">
+        <input type="submit" value="Sign In" oneclick="IsRememberMe()"/>
+        <a href="register"><input type="button" value="Sign Up" class="signup"/></a>
+        </div>
+    </form>
+
+</body>
+</html> 
+
+
+

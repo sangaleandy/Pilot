@@ -1,0 +1,71 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'login.css' %}">
+
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundle packages</title>
+</head>
+<body>
+   {% if user.is_authenticated %}
+   <div class="line">
+    <a>PACKAGES</a>
+    <a href="services" class="item2">CONTACT US</a>
+    <a href="about" class="item2">ABOUT</a>
+    <a href="logout">LOGOUT</a>
+    <!--<li>Africa<img src="static/background.jpg" alt="Flowers" width="48" height="48"></li>-->
+    <!--<a href="static/background.jpg" download>-->
+ </div>
+
+ <!--Data sizes-->
+ 
+ <div class="mbsupper">
+    <li><a href="https://www.edureka.co"><img src="static/Check/1gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/2gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/4gb.png"></a></li>
+</div>
+
+<div class="mbslower">
+    <li><a href="https://www.edureka.co"><img src="static/Check/7gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/15gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/25gb.png"></a></li>
+</div>
+ <h1>
+    Welcome, {{user.username}} 
+</h1>
+{% else %}
+<div class="line">
+   <a href="/" class="item1">HOME</a>
+   <a href="login" class="item2">PACKAGES</a>
+   <a href="register" class="item2">REGISTER</a>
+   <a href="services" class="item2">CONTACT US</a>
+   <a href="about" class="item2">ABOUT</a>
+</div>
+
+<li><a href="login"><!--Login or Signup--></a></li>
+
+<!--Data sizes-->
+
+<div class="mbsupper">
+    <li><a href="https://www.edureka.co"><img src="static/Check/1gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/2gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/4gb.png"></a></li>
+</div>
+
+<div class="mbslower">
+    <li><a href="https://www.edureka.co"><img src="static/Check/7gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/15gb.png"></a></li>
+    <li><a href="https://www.edureka.co"><img src="static/Check/25gb.png"></a></li>
+</div>
+{% endif %}
+   
+</body>
+</html> 
